@@ -1,12 +1,12 @@
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from 'uuid'
 
-import img_tshirt1 from '../../assets/images/tshirt_1.jpg';
-import img_tshirt2 from '../../assets/images/tshirt_2.webp';
-import img_tshirt3 from '../../assets/images/tshirt_3.jpg';
-import img_tshirt4 from '../../assets/images/tshirt_4.jpg';
-import img_tshirt5 from '../../assets/images/tshirt_5.webp';
-import img_tshirt6 from '../../assets/images/tshirt_6.jpg';
-import img_tshirt7 from '../../assets/images/tshirt_7.jpg';
+import img_tshirt1 from '../../assets/images/tshirt_1.jpg'
+import img_tshirt2 from '../../assets/images/tshirt_2.webp'
+import img_tshirt3 from '../../assets/images/tshirt_3.jpg'
+import img_tshirt4 from '../../assets/images/tshirt_4.jpg'
+import img_tshirt5 from '../../assets/images/tshirt_5.webp'
+import img_tshirt6 from '../../assets/images/tshirt_6.jpg'
+import img_tshirt7 from '../../assets/images/tshirt_7.jpg'
 
 let initialState = [
   {
@@ -21,13 +21,13 @@ let initialState = [
   { id: uuid(), title: 'Expert Advice', price: 59.9, image: img_tshirt4 },
   { id: uuid(), title: 'Silent Grammar', price: 59.9, image: img_tshirt6 },
   { id: uuid(), title: 'I`m hiding', price: 59.9, image: img_tshirt7 },
-];
+]
 
-const itemsSlice = (state = initialState, action) => {
+const itemsSlice = (state = initialState) => {
   // leave it empty in case of future functionalities
-  return state;
-};
+  return state
+}
 
-export const shirtImages = [img_tshirt1, img_tshirt2, img_tshirt3, img_tshirt4];
+export const shirtImages = [img_tshirt1, img_tshirt2, img_tshirt3, img_tshirt4]
 
-export default itemsSlice;
+export default itemsSlice
