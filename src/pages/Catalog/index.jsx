@@ -1,6 +1,6 @@
 import './styles.scss'
 import { useSelector } from 'react-redux'
-import Item from '../Item/index.jsx'
+import Item from '../../components/Item/index.jsx'
 
 function Catalog() {
   const items = useSelector((state) => state.items)

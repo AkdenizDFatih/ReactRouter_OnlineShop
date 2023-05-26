@@ -1,4 +1,4 @@
-import Router from './routes/Routes.jsx'
+import Router from './routes'
 import LoadingSpinner from './components/LoadingSpinner'
 import useReloadAuth from './hooks/useReloadAuth.js'
 

@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Catalog from '../components/Catalog/index.jsx'
-import LoginPage from '../components/Authentication/LoginPage.jsx'
-import Cart from '../components/Cart/index.jsx'
+import Catalog from '../pages/Catalog/index.jsx'
+import LoginPage from '../pages/Authentication/LoginPage.jsx'
+import Cart from '../pages/Cart/index.jsx'
 import Layout from './Layout.jsx'
 import ProtectedRoutes from './ProtectedRoutes.jsx'
-import RegisterPage from '../components/Authentication/RegisterPage.jsx'
-import ValidationPage from '../components/Authentication/ValidationPage.jsx'
-import NotFound from './NotFound.jsx'
+import RegisterPage from '../pages/Authentication/RegisterPage.jsx'
+import ValidationPage from '../pages/Authentication/ValidationPage.jsx'
+import NotFound from '../pages/NotFound.jsx'
 
 const Router = () => {
   return (
