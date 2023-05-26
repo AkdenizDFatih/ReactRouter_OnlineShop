@@ -8,7 +8,7 @@ import useApiRequest from '../../hooks/useApiRequest'
 function LoginPage() {
   const [user, setUser] = useState({})
 
-  const [sendRequest, data, error, isLoading] = useApiRequest()
+  const { sendRequest, data, error, isLoading } = useApiRequest()
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const location = useLocation()

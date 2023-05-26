@@ -1,32 +1,15 @@
-import { login_user, logout_user } from './store/slices/userSlice'
-import { useDispatch, useSelector } from 'react-redux'
 import Router from './routes/Routes.jsx'
 import LoadingSpinner from './components/LoadingSpinner'
-import useAutoFetch from './hooks/useAutoFetch.js'
+import useReloadAuth from './hooks/useReloadAuth.js'
 
 function App() {
-  const token = useSelector((state) => state.user.access_token)
-  const dispatch = useDispatch()
+  const { isLoading } = useReloadAuth()
 
-  const accessToken = localStorage.getItem('accessToken')
-  const username = localStorage.getItem('username')
-
-  // eslint-disable-next-line no-unused-vars
-  const [data, isLoading, error] = useAutoFetch('post', 'auth/token/verify/', {
-    token: accessToken,
-  })
-
-  if (!error) {
-    dispatch(login_user({ user: { username }, access: accessToken }))
-    console.log(data)
+  if (isLoading) {
+    return <LoadingSpinner />
   } else {
-    dispatch(logout_user())
-    localStorage.clear()
+    return <Router />
   }
-
-  if (token || token === null) return <Router />
-
-  return <LoadingSpinner />
 }
 
 export default App

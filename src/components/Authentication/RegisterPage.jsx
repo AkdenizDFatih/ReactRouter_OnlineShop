@@ -6,7 +6,7 @@ import useApiRequest from '../../hooks/useApiRequest'
 function RegisterPage() {
   const [user, setUser] = useState({})
 
-  const [sendRequest, data, error, isLoading] = useApiRequest()
+  const { sendRequest, data, error, isLoading } = useApiRequest()
   const navigate = useNavigate()
 
   const inputHandler = (e) => {
